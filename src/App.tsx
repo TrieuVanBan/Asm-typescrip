@@ -4,12 +4,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Routes, Route, Link, NavLink, Navigate } from "react-router-dom";
 import Websitelayout from './fontend/layouts/Websitelayout';
 import WebsiteAdmin from './fontend/layouts/WebsiteAdmin';
-import { add, list } from './fontend/api/product'
+import { add, list, update } from './fontend/api/product'
 import Web from './pages/admin/products/web'
 import Shop from './fontend/components/shop'
 import Main from './fontend/components/Main';
 import List from './pages/admin/category/list'
 import ProductAdd from './pages/admin/products/ProductAdd';
+import ProductEdit from './pages/admin/products/ProductEdit';
 import { ProductType } from './fontend/types/Product';
 
 function App() {
@@ -26,6 +27,10 @@ function App() {
   const onHandleAdd = async (product: ProductType) => {
     const { data } = await add(product);
     setProducts([...products, data]);
+  }
+  const onHandleUpdate = async (product: ProductType) => {
+    const { data } = await update(product);
+    setProducts(products.map(item => item._id == data._id ? data : item));
   }
   return (
     <div className="App">
@@ -45,6 +50,7 @@ function App() {
           <Route path="index" element={<Web />} />
           <Route path="products">
             <Route path="add" element={<ProductAdd name="product" onAdd={onHandleAdd} />} />
+            <Route path=":id/edit" element={<ProductEdit onUpdate={onHandleUpdate} />} />
           </Route>
         </Route>
 

@@ -29,11 +29,14 @@ const ProductAdd = (props: ProductAddProps) => {
             <h2>Thêm sản phẩm</h2>
             <div>
                 <label htmlFor="">Tên sản phẩm</label><br />
-                <input style={{ width: '40%' }} type="text"  {...register('name')} />
+                <input style={{ width: '40%' }} type="text"  {...register('name', {required:true, minLength:6})} /> <br />
+                {errors.name && errors.name.type === "required" && <span className="validate">Tên sản phẩm không được để trống</span> }
+                {errors.name && errors.name.type === "minLength" && <span className="validate">Tên sản phẩm ít nhất 6 kí tự</span> }
             </div> <br />
             <div>
                 <label htmlFor="">Giá sản phẩm</label><br />
-                <input style={{ width: '40%' }} type="number"  {...register('price')} /> <br />
+                <input style={{ width: '40%' }} type="number"  {...register('price' , {required:true})} /> <br />
+                {errors.name && errors.name.type === "required" && <span className="validate">Giá sản phẩm không được để trống</span> }
             </div> <br />
             <div>
                 <label htmlFor="">Ảnh sản phẩm</label><br />
@@ -41,7 +44,8 @@ const ProductAdd = (props: ProductAddProps) => {
             </div><br />
             <div>
                 <label htmlFor="">Mô tả</label><br />
-                <textarea style={{ width: '40%' }}  {...register('description')} id="" cols="30" rows="8"></textarea>
+                <textarea style={{ width: '40%' }}  {...register('description' , {required:true})} id="" cols="30" rows="8"></textarea> <br />
+                {errors.name && errors.name.type === "required" && <span className="validate">Mô tả sản phẩm không được để trống</span> }
             </div>
             <button className="btn-primaryy">
                 Thêm

@@ -148,3 +148,31 @@
   margin: 30px 0 20px 0;
   float: right;
 }
+.search{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.search11{
+  width: 250px;
+  outline: none
+}
+.search111{
+  color: #fff;
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+  border-radius: 2px;
+  border: none;
+  padding:3px 5px;
+  margin-left: 10px;
+}
+.loc{
+  display: flex;
+  justify-content: space-between;
+}
+.validate{
+  color: red;
+}
+.navedit{
+  padding: 0;
+}

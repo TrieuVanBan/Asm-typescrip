@@ -1,5 +1,5 @@
 import React from 'react'
-import { ListGroup, Pagination } from 'react-bootstrap'
+import { Button, Form, ListGroup, Pagination } from 'react-bootstrap'
 
 type Props = {}
 
@@ -21,9 +21,30 @@ const shop = (props: Props) => {
                         <ListGroup.Item as="li">Sản phẩm 6</ListGroup.Item>
                     </ListGroup>
                 </div>
+                <div> <br/><br/><br/>
+                    <>
+                        <Form.Label>
+                            <h4>Lọc</h4>
+                        </Form.Label>
+                        <Form.Range />
+                        <div className="loc">
+                            <h5>10$</h5>
+                            <h5>100$</h5>
+                        </div>
+                        
+                    </>
+                </div>
             </div>
+
             <div className="allSP">
-                <h2>Tất cả sản phẩm</h2>
+                <div className="search">
+                    <h2>Tất cả sản phẩm</h2>
+                    <div className="search1">
+                        <input type="text" name="" id="" placeholder='Search...' className="search11" />
+                        <input type="button" value="Tìm kiếm" className="search111" />
+                    </div>
+                </div>
+
                 <div className="spmoi spmoi_1">
                     <div className="imgmoi imgmoi_1">
                         <img src="https://cf.shopee.vn/file/28d11974d7901d151277509d593cf760" alt="" />
