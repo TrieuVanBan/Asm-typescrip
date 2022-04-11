@@ -3,6 +3,9 @@ import morgan from "morgan";
 import mongoose from "mongoose";
 import cors from "cors";
 import productRouter from "./routers/product";
+// import categoryRouter from "./routers/category";
+import authRouter from "./routers/auth";
+
 
 const app = express();
 
@@ -12,6 +15,9 @@ app.use(cors());
 app.use(morgan('tiny'));
 
 app.use('/api', productRouter)
+// app.use("/api", categoryRouter);
+app.use("/api", authRouter)
+
 // Ket noi sever
 const PORT = 5000;
 app.listen(PORT, ()=>{

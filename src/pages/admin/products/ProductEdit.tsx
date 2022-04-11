@@ -27,11 +27,9 @@ const ProductEdit = (props: ProductEditProps) => {
     }, [])
 
     const onSubmit: SubmitHandler<FormInputs> = data => {
-        console.log(data)
+        alert("Bạn đã cập nhật thành công")
         props.onUpdate(data);
         navigate("/admin/index")
-        // bắn data ra ngoài app.js
-        // redirect sang trang product
     }
     return (
         <form style={{ width: '100%' }} onSubmit={handleSubmit(onSubmit)}>
@@ -40,19 +38,25 @@ const ProductEdit = (props: ProductEditProps) => {
                 <label htmlFor="">Tên sản phẩm</label><br />
                 <input style={{ width: '40%' }} type="text"  {...register('name', { required: true })} />
             </div>
+            <br />
             <div>
                 <label htmlFor="">Giá sản phẩm</label><br />
                 <input style={{ width: '40%' }} type="number"  {...register('price')} />
             </div>
+            <br />
             <div>
                 <label htmlFor="">Ảnh sản phẩm</label><br />
                 <input style={{ width: '40%' }} type="text"  {...register('image')} />
             </div>
+            <br />
             <div>
                 <label htmlFor="">Mô tả sản phẩm</label><br />
                 <textarea style={{ width: '40%' }}  {...register('description' , {required:true})} id="" cols="30" rows="8"></textarea> <br />
             </div>
-            <button>Update</button>
+            <br />
+            <button className="btn-primaryy">
+                Cập nhật
+            </button>
         </form>
     )
 }
