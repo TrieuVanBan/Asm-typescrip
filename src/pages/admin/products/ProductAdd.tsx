@@ -29,9 +29,9 @@ const ProductAdd = (props: ProductAddProps) => {
     return (
         <form style={{ width: '100%' }} onSubmit={handleSubmit(onSubmit)}>
             <h2>Thêm sản phẩm</h2>
-            <Form.Select aria-label="Default select example" style={{ width: '12%' }}>
+            <Form.Select {...register('cateId')} aria-label="Default select example" style={{ width: '12%' }}>
                 {props.categorys?.map((item, index) => {
-                    return <option {...register('cateId')} value={item._id}>{item.name}</option>
+                    return <option  value={item._id}>{item.name}</option>
                 })};
             </Form.Select>
             <div>

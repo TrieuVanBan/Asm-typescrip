@@ -23,7 +23,7 @@ const web = (props: Props) => {
 
     const handleOnremove = async (product: ProductType) => {
         remove(product._id);
-        // reRender
+        
         const { data } = await list();
         setProducts(data);
         // console.log(products)

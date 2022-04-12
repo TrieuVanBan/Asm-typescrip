@@ -11,7 +11,7 @@ export const signup = async (req, res) => {
                 message: "User da ton tai"
             })
         }
-        const user = new User({email, name, password}).save();
+        const user = await new User({email, name, password}).save();
         res.json({
             user: {
                 _id: user._id,

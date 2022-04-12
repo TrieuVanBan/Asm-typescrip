@@ -11,11 +11,11 @@ function Navbar({ }: Props) {
       <div className="logo">
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjdgOyWUy4LP1HywQ30AxxCF15LrVd-KbdAA&usqp=CAU" width="8%" alt="" />
         <div className="login">
-          <a className="login1" href="">Đăng nhập</a>
-          <a className="login1" href="">Đăng kí</a>
-          <a href="">
+          <Nav.Link>
+            <NavLink className="login1 NavLink" to="/signin">Đăng nhập</NavLink>
+            <NavLink className="login1 NavLink" to="/signup">Đăng kí</NavLink>
             <img src="https://img.icons8.com/ios/2x/shopping-cart-loaded--v2.gif" width="1.5%" alt="" />
-          </a>
+          </Nav.Link>
         </div>
       </div>
       <Nav className="nav">

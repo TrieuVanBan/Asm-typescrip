@@ -52,13 +52,18 @@ const shop = (props: Props) => {
                 <div className="spmoi spmoi_1">
                     {props.products?.map((item, index) => {
                         return <div key={index} className="imgmoi imgmoi_1">
-                            <img src={item.image} alt="" />
-                            <div className="name">
-                                <Link to={`/product/${item._id}`}>
-                                    <span>{item.name}</span> <br />
-                                    <span>{item.price}</span>
-                                </Link>
-                            </div>
+                            <Link to={`/product/${item._id}`} className="name">
+                                <img src={item.image} alt="" />
+                                <div className="name namee">
+                                    <div className="name1">
+                                        <span>{item.name}</span> <br />
+                                        <span>{item.price}</span>
+                                    </div>
+                                    <div className="name11">
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdLk7yUGRkE_FGGa8xngXxf0viECPxMGWcSg&usqp=CAU" alt="" />
+                                    </div>
+                                </div>
+                            </Link>
                         </div>
                     })}
                 </div>
@@ -83,7 +88,7 @@ const shop = (props: Props) => {
                 </div>
             </div>
 
-        </div>
+        </div >
     )
 }
 
