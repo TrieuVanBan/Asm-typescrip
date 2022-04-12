@@ -176,3 +176,34 @@
 .navedit{
   padding: 0;
 }
+.signup{
+  width: 40%;
+  margin:200px auto;
+  border: 3px double #ccc;
+  border-radius:10px;
+  padding: 40px;
+}
+.signup h2{
+  text-align: center;
+  width: 100%;
+  margin: auto;
+  color: #0b5ed7;
+}
+.signup1{
+  width: 50%;
+  margin: auto;
+  display: flex;
+}
+.pass{
+  font-size:16px
+}
+.detaill{
+  display: flex;
+  padding:100px;
+}
+.detaill_img{
+  flex:1;
+}
+.detail_1{
+  flex:1;
+}

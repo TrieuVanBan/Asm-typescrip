@@ -1,23 +1,28 @@
-import mongoose,{Schema} from "mongoose";
+import mongoose, { Schema } from "mongoose";
+import category from '../models/category';
 
 const ProductSchema = new Schema({
-    image:{
+    image: {
         type: String,
         required: true,
     },
-    name:{
+    name: {
         type: String,
         required: true,
     },
-    price:{
+    price: {
         type: Number,
         required: true,
     },
-    description:{
+    description: {
         type: String,
         required: true,
+    },
+    cateId: {
+        type: Schema.Types.ObjectId,
+        ref: category
     }
 
-},{timestamps:true})
+}, { timestamps: true })
 
-export default mongoose.model('Product',ProductSchema )
+export default mongoose.model('Product', ProductSchema)

@@ -3,7 +3,7 @@ import morgan from "morgan";
 import mongoose from "mongoose";
 import cors from "cors";
 import productRouter from "./routers/product";
-// import categoryRouter from "./routers/category";
+import categoryRouter from "./routers/category";
 import authRouter from "./routers/auth";
 
 
@@ -15,7 +15,7 @@ app.use(cors());
 app.use(morgan('tiny'));
 
 app.use('/api', productRouter)
-// app.use("/api", categoryRouter);
+app.use("/api", categoryRouter)
 app.use("/api", authRouter)
 
 // Ket noi sever

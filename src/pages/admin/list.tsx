@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
-import { ListGroup } from 'react-bootstrap'
 import { Table } from 'react-bootstrap'
 import { Button } from 'react-bootstrap'
-import { ProductType } from '../../../fontend/types/Product'
-import { get } from 'react-hook-form'
+import { ProductType } from '../../fontend/types/Product'
 import { Nav } from 'react-bootstrap'
 import { NavLink } from 'react-router-dom'
 
@@ -55,7 +53,7 @@ const list = (props: listProps) => {
                                 <td>{item.price}</td>
                                 <td> <img width="100px" height="100px" src={item.image} alt="" /></td>
                                 <td>{item.description}</td>
-                                <td>{item.name}</td>
+                                <td>{item.cateId}</td>
                                 <td>
                                     <Button onClick={() => removeItem(item)} variant="primary">Xóa</Button>{' '}
                                         <NavLink to={`/admin/products/${item._id}/edit`} className="navedit">

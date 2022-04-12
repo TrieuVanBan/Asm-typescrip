@@ -1,10 +1,12 @@
-// import { Router } from 'express';
-// import { create, list, read } from '../controllers/category';
-// import { checkAuth } from '../middleware/checkAuth';
+import { Router } from 'express';
+import { createe, listt, readd, removee, updatee } from '../controllers/category';
 
-// const router = Router();
+const router = Router();
 
-// router.get("/categories", checkAuth, list);
-// router.post('/category', checkAuth, create);
-// router.get('/category/:slug', checkAuth, read);
-// export default router
+router.post('/category', createe);
+router.get("/category/:id", readd);
+router.get("/category",listt);
+router.delete("/category/:id",removee);
+router.put("/category/:id",updatee);
+
+export default router;

@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from '../header'
 import Cate from '../cate'
-import List from '../category/list'
+import List from '../list'
 import { useEffect, useState } from 'react'
 import { list, remove } from '../../../fontend/api/product'
 import { ProductType } from '../../../fontend/types/Product'

@@ -1,7 +1,10 @@
 import React from 'react'
 import { Button, Form, ListGroup, Pagination } from 'react-bootstrap'
+import { ProductType } from '../types/Product'
 
-type Props = {}
+type Props = {
+    products: ProductType,
+}
 
 const shop = (props: Props) => {
     return (
@@ -21,7 +24,7 @@ const shop = (props: Props) => {
                         <ListGroup.Item as="li">Sản phẩm 6</ListGroup.Item>
                     </ListGroup>
                 </div>
-                <div> <br/><br/><br/>
+                <div> <br /><br /><br />
                     <>
                         <Form.Label>
                             <h4>Lọc</h4>
@@ -31,7 +34,7 @@ const shop = (props: Props) => {
                             <h5>10$</h5>
                             <h5>100$</h5>
                         </div>
-                        
+
                     </>
                 </div>
             </div>
@@ -44,116 +47,19 @@ const shop = (props: Props) => {
                         <input type="button" value="Tìm kiếm" className="search111" />
                     </div>
                 </div>
-
+                {/* San pham */}
                 <div className="spmoi spmoi_1">
-                    <div className="imgmoi imgmoi_1">
-                        <img src="https://cf.shopee.vn/file/28d11974d7901d151277509d593cf760" alt="" />
-                        <div className="name">
-                            <a href="">
-                                <span>Áo Hoodie</span> <br />
-                                <span>300.000VND</span>
-                            </a>
+                    {props.products?.map((item, index) => {
+                        return <div key={index} className="imgmoi imgmoi_1">
+                            <img src={item.image} alt="" />
+                            <div className="name">
+                                <a href="">
+                                    <span>{item.name}</span> <br />
+                                    <span>{item.price}</span>
+                                </a>
+                            </div>
                         </div>
-                    </div>
-                    <div className="imgmoi imgmoi_1 ">
-                        <img src="https://cf.shopee.vn/file/28d11974d7901d151277509d593cf760" alt="" />
-                        <div className="name">
-                            <a href="">
-                                <span>Áo Hoodie</span> <br />
-                                <span>300.000VND</span>
-                            </a>
-                        </div>
-                    </div>
-                    <div className="imgmoi imgmoi_1 ">
-                        <img src="https://cf.shopee.vn/file/28d11974d7901d151277509d593cf760" alt="" />
-                        <div className="name">
-                            <a href="">
-                                <span>Áo Hoodie</span> <br />
-                                <span>300.000VND</span>
-                            </a>
-                        </div>
-                    </div>
-                    <div className="imgmoi imgmoi_1 ">
-                        <img src="https://cf.shopee.vn/file/28d11974d7901d151277509d593cf760" alt="" />
-                        <div className="name">
-                            <a href="">
-                                <span>Áo Hoodie</span> <br />
-                                <span>300.000VND</span>
-                            </a>
-                        </div>
-                    </div>
-                    <div className="imgmoi imgmoi_1 ">
-                        <img src="https://cf.shopee.vn/file/28d11974d7901d151277509d593cf760" alt="" />
-                        <div className="name">
-                            <a href="">
-                                <span>Áo Hoodie</span> <br />
-                                <span>300.000VND</span>
-                            </a>
-                        </div>
-                    </div>
-                    <div className="imgmoi imgmoi_1 ">
-                        <img src="https://cf.shopee.vn/file/28d11974d7901d151277509d593cf760" alt="" />
-                        <div className="name">
-                            <a href="">
-                                <span>Áo Hoodie</span> <br />
-                                <span>300.000VND</span>
-                            </a>
-                        </div>
-                    </div>
-                    <div className="imgmoi imgmoi_1 ">
-                        <img src="https://cf.shopee.vn/file/28d11974d7901d151277509d593cf760" alt="" />
-                        <div className="name">
-                            <a href="">
-                                <span>Áo Hoodie</span> <br />
-                                <span>300.000VND</span>
-                            </a>
-                        </div>
-                    </div>
-                    <div className="imgmoi imgmoi_1 ">
-                        <img src="https://cf.shopee.vn/file/28d11974d7901d151277509d593cf760" alt="" />
-                        <div className="name">
-                            <a href="">
-                                <span>Áo Hoodie</span> <br />
-                                <span>300.000VND</span>
-                            </a>
-                        </div>
-                    </div>
-                    <div className="imgmoi imgmoi_1 ">
-                        <img src="https://cf.shopee.vn/file/28d11974d7901d151277509d593cf760" alt="" />
-                        <div className="name">
-                            <a href="">
-                                <span>Áo Hoodie</span> <br />
-                                <span>300.000VND</span>
-                            </a>
-                        </div>
-                    </div>
-                    <div className="imgmoi imgmoi_1 ">
-                        <img src="https://cf.shopee.vn/file/28d11974d7901d151277509d593cf760" alt="" />
-                        <div className="name">
-                            <a href="">
-                                <span>Áo Hoodie</span> <br />
-                                <span>300.000VND</span>
-                            </a>
-                        </div>
-                    </div>
-                    <div className="imgmoi imgmoi_1 ">
-                        <img src="https://cf.shopee.vn/file/28d11974d7901d151277509d593cf760" alt="" />
-                        <div className="name">
-                            <a href="">
-                                <span>Áo Hoodie</span> <br />
-                                <span>300.000VND</span>
-                            </a>
-                        </div>
-                    </div>
-                    <div className="imgmoi imgmoi_1 ">
-                        <img src="https://cf.shopee.vn/file/28d11974d7901d151277509d593cf760" alt="" />
-                        <div className="name">
-                            <a href="">
-                                <span>Áo Hoodie</span> <br />
-                                <span>300.000VND</span>
-                            </a>
-                        </div>
-                    </div>
+                    })}
                 </div>
                 <div className="Paginationn">
                     <Pagination>
