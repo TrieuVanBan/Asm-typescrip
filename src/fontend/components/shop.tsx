@@ -1,5 +1,6 @@
 import React from 'react'
 import { Button, Form, ListGroup, Pagination } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 import { ProductType } from '../types/Product'
 
 type Props = {
@@ -53,10 +54,10 @@ const shop = (props: Props) => {
                         return <div key={index} className="imgmoi imgmoi_1">
                             <img src={item.image} alt="" />
                             <div className="name">
-                                <a href="">
+                                <Link to={`/product/${item._id}`}>
                                     <span>{item.name}</span> <br />
                                     <span>{item.price}</span>
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     })}

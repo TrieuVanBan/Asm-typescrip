@@ -30,7 +30,7 @@ function App() {
     setProducts(data)
   }
   getProducts()
-  })
+  },[]);
 
 
   // products
@@ -74,8 +74,8 @@ function App() {
 
           <Route path="product">
             <Route index element={<Shop products={products} />} />
+          <Route path=":id" element={<Detail />} />
           </Route>
-          <Route path="detail" element={<Detail />} />
 
         </Route>
       </Routes>

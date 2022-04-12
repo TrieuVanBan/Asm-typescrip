@@ -22,6 +22,6 @@ export const update= (product: ProductType)=> {
 }
 
 export const read= (_id: number)=> {
-    const url = `products/${_id}`
+    const url = `product/${_id}`
     return instance.get(url)
 }

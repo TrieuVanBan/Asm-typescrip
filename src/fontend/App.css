@@ -204,6 +204,9 @@
 .detaill_img{
   flex:1;
 }
+.detaill_img img{
+  width: 60%;
+}
 .detail_1{
   flex:1;
 }
